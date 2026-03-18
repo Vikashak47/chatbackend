@@ -11,7 +11,7 @@ const { app, server } = require('./lib/socket');
 const AuthRoutes = require('./routes/authRouter');
 const MessageRoutes = require('./routes/messageRouter');
 const PORT = process.env.PORT;
-const CLIENT_URL = process.env.CLIENT_URL;
+const CLIENT_URL = "https://chatfrontend-sooty.vercel.app";
 
 app.use(cors({
     origin: CLIENT_URL,
