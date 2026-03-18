@@ -12,9 +12,11 @@ const AuthRoutes = require('./routes/authRouter');
 const MessageRoutes = require('./routes/messageRouter');
 const PORT = process.env.PORT;
 app.use(cors({
-    origin: ["https://chatfrontend-sooty.vercel.app/"],
+    origin: "https://chatfrontend-sooty.vercel.app",
     credentials: true,
 }));
+
+app.options('*', cors());
 app.use(express.json({ limit: "10mb" }));
 app.use(express.urlencoded({ limit: "10mb", extended: true }));
 app.use(cookieParser());
